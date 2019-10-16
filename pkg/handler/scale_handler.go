@@ -567,7 +567,7 @@ func (h *ScaleHandler) getScaler(name, namespace, triggerType string, resolvedEn
 	case "azure-queue":
 		return scalers.NewAzureQueueScaler(resolvedEnv, triggerMetadata, authParams, podIdentity)
 	case "azure-servicebus":
-		return scalers.NewAzureServiceBusScaler(resolvedEnv, triggerMetadata)
+		return scalers.NewAzureServiceBusScaler(resolvedEnv, triggerMetadata, authParams)
 	case "aws-sqs-queue":
 		return scalers.NewAwsSqsQueueScaler(resolvedEnv, triggerMetadata)
 	case "aws-cloudwatch":
